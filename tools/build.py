@@ -39,8 +39,6 @@ page('index.html','Priscilla A. Grijalva',f'''
  <div class="split-img"><img src="{I}d09942e5-8feb2afe-dec7-43ca-8141-76abfdc5369c.png" alt=""></div>
  <div><p class="big">As a first-generation college student and Latina school counselor, my purpose is to advance equity, inclusion, and social justice in education. I partner with schools, school counselors, educators, and organizations to expand access to postsecondary opportunities, strengthen equitable practices, and create systems that support student success. Through consulting, professional learning, and advocacy, I work to amplify the voices of historically underrepresented and underserved students and help ensure that each and every student has access to the opportunities, resources, and support they need to be successful.</p></div>
 </div></section>
-<section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>
- {VIDS}</div></section>
 <section class="band dark"><div class="wrap cta"><h2>Let’s Build Systems of Hope Together!</h2>
 <p>Whether you are planning a conference, exploring professional learning opportunities, or looking for ways to strengthen student support systems, I’d welcome the opportunity to connect and collaborate!</p>
 <a class="btn light" href="contact.html">Contact</a></div></section>''')
@@ -117,8 +115,8 @@ pods=[("https://podcasts.apple.com/us/podcast/the-power-of-advocacy-how-school-c
 ("https://podcasts.apple.com/us/podcast/school-counselor-advocacy-and-empowering-students-for/id1596980312?i=1000629047426","0c438137-link.png"),
 ("https://podcasts.apple.com/us/podcast/beyond-guidance-reaching-beyond-to-support-school-counselors/id1649121266?i=1000605077996","6f601e97-link.png"),
 ("https://podcasts.apple.com/us/podcast/priscilla-grijalva-on-helping-kids-with-lifes-journey/id1512600888?i=1000553884108","d1a51723-link.png")]
-page('media-1.html','Media — Priscilla A. Grijalva',hero('Podcasts &amp; Interviews','Media','Priscilla often lends a voice to the media to address issues and advocate for school counseling, financial aid, and college access. Listen to these podcasts to learn more.')+
- f'<section class="band"><div class="wrap tiles">{"".join(card("",u,i) for u,i in pods)}</div></section><section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>{VIDS}</div></section>')
+page('media-1.html','Media — Priscilla A. Grijalva',hero('Podcasts &amp; Interviews','Media','Priscilla often lends a voice to the media to address issues and advocate for school counseling, financial aid, and college access. Watch these videos and listen to these podcasts to learn more.')+
+ f'<section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>{VIDS}</div></section><section class="band"><div class="wrap"><h2 class="sec">Listen</h2><div class="tiles">{"".join(card("",u,i) for u,i in pods)}</div></div></section>')
 
 # PRESENTATIONS
 pr=L['pres'][1:]
