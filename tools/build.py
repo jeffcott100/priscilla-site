@@ -5,9 +5,9 @@ R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 L=json.load(open(os.path.join(R,'tools/lists.json')))
 I='assets/img/'
 e=html.escape
-NAV=[('Bio','bio.html'),('Keynotes &amp; Speeches','speaking-1.html'),('Book','book.html'),('Thought Leadership','media.html'),('Media','media-1.html'),('Presentations','presentations-and-workshops.html'),('Testimonies','reviews-and-testimonies.html'),('Gallery','gallery.html'),('Contact','contact.html')]
+NAV=[('Book','book.html'),('Keynotes','speaking-1.html'),('Thought Leadership','media.html'),('Presentations','presentations-and-workshops.html'),('Media','media-1.html'),('Testimonials','reviews-and-testimonies.html'),('Gallery','gallery.html'),('Contact','contact.html')]
 def page(fn,title,body):
-    nav=''.join(f'<a href="{h}"{" aria-current=page" if h==fn else ""}>{t}</a>' for t,h in NAV)
+    nav=''.join(f'<a href="{h}"{" class=nav-cta" if h=="contact.html" else ""}{" aria-current=page" if h==fn else ""}>{t}</a>' for t,h in NAV)
     out=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>{title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,11 +38,11 @@ page('index.html','Priscilla A. Grijalva',f'''
  <div class="split-img"><img src="{I}d09942e5-8feb2afe-dec7-43ca-8141-76abfdc5369c.png" alt=""></div>
  <div><p class="big">As a first-generation college student and Latina school counselor, my purpose is to advance equity, inclusion, and social justice in education. I partner with schools, school counselors, educators, and organizations to expand access to postsecondary opportunities, strengthen equitable practices, and create systems that support student success. Through consulting, professional learning, and advocacy, I work to amplify the voices of historically underrepresented and underserved students and help ensure that each and every student has access to the opportunities, resources, and support they need to be successful.</p></div>
 </div></section>
-<section class="band"><div class="wrap">
+<section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>
  <div class="videos">
-  <figure><div class="vid wide"><iframe src="https://www.youtube.com/embed/ZvJB_HISdPU" title="NACAC 2022" allowfullscreen loading="lazy"></iframe></div>
-   <figcaption><a href="https://youtu.be/ZvJB_HISdPU?si=wdtx_RJXNUgXuaqW" {EXT}>Speaking on the Main Stage at the 2022 Nacac conference</a></figcaption></figure>
-  <figure><div class="vid tall"><iframe src="https://www.youtube.com/embed/kmcKiD-HYjA" title="Former students on stage with Former First Lady, Michelle Obama" allowfullscreen loading="lazy"></iframe></div>
+  <figure><div class="vid"><iframe src="https://www.youtube.com/embed/ZvJB_HISdPU" title="NACAC 2022" allowfullscreen loading="lazy"></iframe></div>
+   <figcaption><a href="https://youtu.be/ZvJB_HISdPU?si=wdtx_RJXNUgXuaqW" {EXT}>Speaking on the Main Stage at the 2022 NACAC conference</a></figcaption></figure>
+  <figure><div class="vid"><iframe src="https://www.youtube.com/embed/kmcKiD-HYjA" title="Former students on stage with Former First Lady, Michelle Obama" allowfullscreen loading="lazy"></iframe></div>
    <figcaption><a href="https://youtube.com/shorts/kmcKiD-HYjA?si=c-FeRawxIiKSSMP9" {EXT}>Former students on stage with Former First Lady, Michelle Obama</a></figcaption></figure>
  </div></div></section>
 <section class="band dark"><div class="wrap cta"><h2>Let’s Build Systems of Hope Together!</h2>
