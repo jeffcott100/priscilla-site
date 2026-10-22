@@ -5,7 +5,7 @@ R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 L=json.load(open(os.path.join(R,'tools/lists.json')))
 I='assets/img/'
 e=html.escape
-NAV=[('Book','book.html'),('Keynotes','speaking-1.html'),('Thought Leadership','media.html'),('Presentations','presentations-and-workshops.html'),('Media','media-1.html'),('Testimonials','reviews-and-testimonies.html'),('Gallery','gallery.html'),('Contact','contact.html')]
+NAV=[('Bio','bio.html'),('Book','book.html'),('Keynotes','speaking-1.html'),('Thought Leadership','media.html'),('Presentations','presentations-and-workshops.html'),('Media','media-1.html'),('Testimonials','reviews-and-testimonies.html'),('Gallery','gallery.html'),('Contact','contact.html')]
 def page(fn,title,body):
     nav=''.join(f'<a href="{h}"{" class=nav-cta" if h=="contact.html" else ""}{" aria-current=page" if h==fn else ""}>{t}</a>' for t,h in NAV)
     out=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -25,6 +25,7 @@ def page(fn,title,body):
 def hero(kicker,title,sub=''):
     return f'<section class="phero"><div class="wrap"><p class="kicker">{kicker}</p><h1>{title}</h1>{f"<p class=lede>{sub}</p>" if sub else ""}</div></section>'
 EXT='target="_blank" rel="noopener"'
+VIDS='<div class="videos">  <figure><div class="vid"><iframe src="https://www.youtube.com/embed/ZvJB_HISdPU" title="NACAC 2022" allowfullscreen loading="lazy"></iframe></div>   <figcaption><a href="https://youtu.be/ZvJB_HISdPU?si=wdtx_RJXNUgXuaqW" '+EXT+'>Speaking on the Main Stage at the 2022 NACAC conference</a></figcaption></figure>  <figure><div class="vid"><iframe src="https://www.youtube.com/embed/kmcKiD-HYjA" title="Former students on stage with Former First Lady, Michelle Obama" allowfullscreen loading="lazy"></iframe></div>   <figcaption><a href="https://youtube.com/shorts/kmcKiD-HYjA?si=c-FeRawxIiKSSMP9" '+EXT+'>Former students on stage with Former First Lady, Michelle Obama</a></figcaption></figure> </div>'
 
 # HOME
 page('index.html','Priscilla A. Grijalva',f'''
@@ -39,12 +40,7 @@ page('index.html','Priscilla A. Grijalva',f'''
  <div><p class="big">As a first-generation college student and Latina school counselor, my purpose is to advance equity, inclusion, and social justice in education. I partner with schools, school counselors, educators, and organizations to expand access to postsecondary opportunities, strengthen equitable practices, and create systems that support student success. Through consulting, professional learning, and advocacy, I work to amplify the voices of historically underrepresented and underserved students and help ensure that each and every student has access to the opportunities, resources, and support they need to be successful.</p></div>
 </div></section>
 <section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>
- <div class="videos">
-  <figure><div class="vid"><iframe src="https://www.youtube.com/embed/ZvJB_HISdPU" title="NACAC 2022" allowfullscreen loading="lazy"></iframe></div>
-   <figcaption><a href="https://youtu.be/ZvJB_HISdPU?si=wdtx_RJXNUgXuaqW" {EXT}>Speaking on the Main Stage at the 2022 NACAC conference</a></figcaption></figure>
-  <figure><div class="vid"><iframe src="https://www.youtube.com/embed/kmcKiD-HYjA" title="Former students on stage with Former First Lady, Michelle Obama" allowfullscreen loading="lazy"></iframe></div>
-   <figcaption><a href="https://youtube.com/shorts/kmcKiD-HYjA?si=c-FeRawxIiKSSMP9" {EXT}>Former students on stage with Former First Lady, Michelle Obama</a></figcaption></figure>
- </div></div></section>
+ {VIDS}</div></section>
 <section class="band dark"><div class="wrap cta"><h2>Let’s Build Systems of Hope Together!</h2>
 <p>Whether you are planning a conference, exploring professional learning opportunities, or looking for ways to strengthen student support systems, I’d welcome the opportunity to connect and collaborate!</p>
 <a class="btn light" href="contact.html">Contact</a></div></section>''')
@@ -71,7 +67,7 @@ page('bio.html','Bio — Priscilla A. Grijalva',hero('Bio','About Priscilla A. G
 </div></div></section>
 <section class="band blush"><div class="wrap"><h2 class="sec">STATE, NATIONAL &amp; INTERNATIONAL RECOGNITIONS</h2><ul class="awards">{''.join(recli(x) for x in rec)}</ul></div></section>
 <section class="band"><div class="wrap cols3">
-<div class="card"><h3>EDUCATION</h3>{ul(edu)}</div><div class="card"><h3>CERTIFICATIONS</h3>{ul(cert)}</div><div class="card"><h3>NATIONAL TEAM RECOGNITIONS</h3>{ul(team)}</div>
+<div class="card"><h3 class="ih"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9c4a2f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/><path d="M22 9v5"/></svg><span>EDUCATION</span></h3>{ul(edu)}</div><div class="card"><h3 class="ih"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9c4a2f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 8h10M7 11h6"/><circle cx="16" cy="17" r="2.5"/><path d="M14.8 19l-.8 3 2-1 2 1-.8-3"/></svg><span>CERTIFICATIONS</span></h3>{ul(cert)}</div><div class="card"><h3 class="ih"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9c4a2f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="15" r="5"/><path d="M8.5 11.5L6 3h4l2 5 2-5h4l-2.5 8.5"/><path d="M12 13l.8 1.6 1.7.2-1.2 1.2.3 1.7-1.6-.8-1.6.8.3-1.7-1.2-1.2 1.7-.2z"/></svg><span>NATIONAL TEAM RECOGNITIONS</span></h3>{ul(team)}</div>
 </div></section>''')
 
 # SPEAKING
@@ -112,6 +108,7 @@ page('media.html','Thought Leadership — Priscilla A. Grijalva',hero('Thought L
  f'<section class="band"><div class="wrap tiles">{"".join(card(*a) for a in art)}</div></section>')
 
 # MEDIA
+
 pods=[("https://podcasts.apple.com/us/podcast/the-power-of-advocacy-how-school-counselors-can/id1469569875?i=1000674738785","f157742d-link.png"),
 ("https://open.spotify.com/episode/4JBIDLI5fITdqcafxhYqa5","a64336b6-link.png"),
 ("https://open.spotify.com/episode/5rY4nm45RQLTS29dREBbnM?si=qRFmenSPS6KjdQDhwAocFg","354bcda5-kheaa.png"),
@@ -121,7 +118,7 @@ pods=[("https://podcasts.apple.com/us/podcast/the-power-of-advocacy-how-school-c
 ("https://podcasts.apple.com/us/podcast/beyond-guidance-reaching-beyond-to-support-school-counselors/id1649121266?i=1000605077996","6f601e97-link.png"),
 ("https://podcasts.apple.com/us/podcast/priscilla-grijalva-on-helping-kids-with-lifes-journey/id1512600888?i=1000553884108","d1a51723-link.png")]
 page('media-1.html','Media — Priscilla A. Grijalva',hero('Podcasts &amp; Interviews','Media','Priscilla often lends a voice to the media to address issues and advocate for school counseling, financial aid, and college access. Listen to these podcasts to learn more.')+
- f'<section class="band"><div class="wrap tiles">{"".join(card("",u,i) for u,i in pods)}</div></section>')
+ f'<section class="band"><div class="wrap tiles">{"".join(card("",u,i) for u,i in pods)}</div></section><section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>{VIDS}</div></section>')
 
 # PRESENTATIONS
 pr=L['pres'][1:]
