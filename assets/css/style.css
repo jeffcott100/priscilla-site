@@ -77,4 +77,4 @@ figure{margin:0}.videos figcaption{margin-top:14px;font-weight:500;font-size:15p
 @media(max-width:560px){body{font-size:16px}.wrap{padding:0 22px}.band{padding:64px 0}.hero{padding:40px 0 64px}.phero{padding:56px 0 36px}
 .tiles,.videos{grid-template-columns:1fr}.awards li{grid-template-columns:1fr;gap:4px}.form .row{grid-template-columns:1fr}.masonry{columns:1}.quote,.card{padding:28px}}
 .fnav a.nav-cta{color:#fff;font-weight:600}
-.card h3.ih{display:flex;align-items:center;gap:8px}.card h3.ih .ico{flex:none}
+.card h3.ih{display:flex;align-items:center;gap:10px;line-height:1.35;text-align:left}.card h3.ih .ico{flex:0 0 auto;width:20px;height:20px;display:block;margin:0}.card h3.ih span{display:block;flex:1 1 auto;min-width:0}
