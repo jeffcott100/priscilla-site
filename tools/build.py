@@ -116,7 +116,7 @@ pods=[("https://podcasts.apple.com/us/podcast/the-power-of-advocacy-how-school-c
 ("https://podcasts.apple.com/us/podcast/beyond-guidance-reaching-beyond-to-support-school-counselors/id1649121266?i=1000605077996","6f601e97-link.png"),
 ("https://podcasts.apple.com/us/podcast/priscilla-grijalva-on-helping-kids-with-lifes-journey/id1512600888?i=1000553884108","d1a51723-link.png")]
 page('media-1.html','Media — Priscilla A. Grijalva',hero('Podcasts &amp; Interviews','Media','Priscilla often lends a voice to the media to address issues and advocate for school counseling, financial aid, and college access. Watch these videos and listen to these podcasts to learn more.')+
- f'<section class="band watch"><div class="wrap"><h2 class="sec">Watch</h2>{VIDS}</div></section><section class="band"><div class="wrap"><h2 class="sec">Listen</h2><div class="tiles">{"".join(card("",u,i) for u,i in pods)}</div></div></section>')
+ f'<section class="band"><div class="wrap"><h2 class="sec">Listen</h2><div class="tiles">{"".join(card("",u,i) for u,i in pods)}</div></div></section><section class="band watch follow"><div class="wrap"><h2 class="sec">Watch</h2>{VIDS}</div></section>')
 
 # PRESENTATIONS
 pr=L['pres'][1:]
