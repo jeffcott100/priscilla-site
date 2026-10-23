@@ -78,3 +78,6 @@ figure{margin:0}.videos figcaption{margin-top:14px;font-weight:500;font-size:15p
 .tiles,.videos{grid-template-columns:1fr}.awards li{grid-template-columns:1fr;gap:4px}.form .row{grid-template-columns:1fr}.masonry{columns:1}.quote,.card{padding:28px}}
 .fnav a.nav-cta{color:#fff;font-weight:600}
 .card h3.ih{display:flex;align-items:center;gap:10px;line-height:1.35;text-align:left}.card h3.ih .ico{flex:0 0 auto;width:20px;height:20px;display:block;margin:0}.card h3.ih span{display:block;flex:1 1 auto;min-width:0}
+
+.feature-vid{display:grid;grid-template-columns:2fr 3fr;gap:48px;align-items:center}.fv-text p{font-size:19px;margin:0 0 24px}
+@media(max-width:760px){.feature-vid{grid-template-columns:1fr;gap:24px}}
