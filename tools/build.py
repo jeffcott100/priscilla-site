@@ -12,7 +12,7 @@ def page(fn,title,body):
 <meta name="robots" content="noindex, nofollow"><title>{title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=r7"></head><body>
+<link rel="stylesheet" href="assets/css/style.css?v=r8"></head><body>
 <a class="skip" href="#page">Skip to Content</a>
 <header class="site-header"><div class="wrap hbar"><a class="brand" href="index.html">Priscilla A. Grijalva</a>
 <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
@@ -40,8 +40,8 @@ page('index.html','Priscilla A. Grijalva',f'''
  <div><p class="big">As a first-generation college student and Latina school counselor, my purpose is to advance equity, inclusion, and social justice in education. I partner with schools, school counselors, educators, and organizations to expand access to postsecondary opportunities, strengthen equitable practices, and create systems that support student success. Through consulting, professional learning, and advocacy, I work to amplify the voices of historically underrepresented and underserved students and help ensure that each and every student has access to the opportunities, resources, and support they need to be successful.</p></div>
 </div></section>
 <section class="band watch"><div class="wrap feature-vid">
- <div class="fv-text"><h2 class="sec">Watch</h2><p>Speaking on the Main Stage at the 2022 NACAC conference.</p><a class="btn" href="https://youtu.be/ZvJB_HISdPU?t=74" target="_blank" rel="noopener">Watch on YouTube</a></div>
- <div class="vid"><button class="vid-cover" aria-label="Play NACAC 2022 Main Stage" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube.com/embed/ZvJB_HISdPU?start=74&amp;autoplay=1&quot; title=&quot;NACAC 2022 Main Stage&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen></iframe>'"><img src="assets/img/nacac-cover.png" alt="Priscilla speaking on the NACAC 2022 main stage"><span class="play"></span></button></div>
+ <div class="fv-text"><h2 class="sec">Watch</h2><p>Speaking on the Main Stage at the 2022 NACAC conference.</p><a class="btn" href="https://youtu.be/ZvJB_HISdPU" target="_blank" rel="noopener">Watch on YouTube</a><p class="more-media"><a href="media-1.html">View more media &rarr;</a></p></div>
+ <div class="vid"><button class="vid-cover" aria-label="Play NACAC 2022 Main Stage" onclick="this.outerHTML='<iframe src=&quot;https://www.youtube.com/embed/ZvJB_HISdPU?autoplay=1&quot; title=&quot;NACAC 2022 Main Stage&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen></iframe>'"><img src="assets/img/nacac-cover.png" alt="Priscilla speaking on the NACAC 2022 main stage"><span class="play"></span></button></div>
 </div></section>
 <section class="band dark"><div class="wrap cta"><h2>Let’s Build Systems of Hope Together!</h2>
 <p>Whether you are planning a conference, exploring professional learning opportunities, or looking for ways to strengthen student support systems, I’d welcome the opportunity to connect and collaborate!</p>
