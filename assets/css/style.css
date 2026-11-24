@@ -102,3 +102,6 @@ figure{margin:0}.videos figcaption{margin-top:14px;font-weight:500;font-size:15p
 .social.dark a{border-color:var(--ink);color:var(--ink)}
 .soc-k{margin:40px 0 0}
 @media(max-width:900px){.reviews{grid-template-columns:1fr}.review{padding:28px}}
+.phero.nobar{border-bottom:0;padding-bottom:8px}
+.booking{display:flex;align-items:center;gap:40px;margin-top:22px}.booking p{margin:0;max-width:62ch;flex:1 1 auto}.booking .btns{margin-top:0;flex:0 0 auto;flex-wrap:nowrap}
+@media(max-width:700px){.booking{flex-direction:column;align-items:flex-start;gap:20px}.booking .btns{flex-wrap:wrap}.dbr{display:none}}
